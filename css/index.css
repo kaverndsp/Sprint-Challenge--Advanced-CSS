@@ -1,3 +1,9 @@
+.flex {
+  display: flex;
+}
+.crosscenter {
+  align-items: center;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -160,6 +166,34 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+.top .navhead {
+  display: flex;
+  background: #e7e7e7;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5% 0%;
+  border-bottom: 1px  grey solid;
+}
+.top .navhead h1 {
+  font-size: 4rem;
+}
+.top .navhead .links {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2%;
+  width: 40%;
+}
+.top .navhead .links a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #575454;
+}
+@media (max-width: 500px) {
+  .top .navhead .links {
+    width: 100%;
+  }
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -176,6 +210,10 @@ footer {
 .home .intro p {
   padding: 0 15px;
 }
+.home .intro img {
+  width: 100%;
+  border-radius: 10px;
+}
 .home .space-images {
   display: flex;
   flex-wrap: wrap;
@@ -186,6 +224,17 @@ footer {
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images .sky {
+    display: none;
+  }
+  .home .space-images .launch {
+    display: none;
+  }
+  .home .space-images .blast {
+    width: 100%;
+  }
 }
 .home .visit-planets {
   padding: 15px;
@@ -212,6 +261,20 @@ footer {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
+.home .walk .walk-text .btn {
+  background-color: black;
+  padding: 5% 1% 1% 7%;
+  cursor: pointer;
+  width: 35%;
+  height: 45px;
+  font-size: 2rem;
+  border-radius: 10px;
+  color: white;
+}
+.home .walk .walk-text .btn:hover {
+  background-color: grey;
+  color: black;
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
@@ -220,4 +283,35 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .walk {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 5% 5%;
+  }
+  .home .walk .walk-text {
+    width: 100%;
+    padding: 4% 0%;
+  }
+  .home .walk .walk-text .btn {
+    background-color: black;
+    padding: 5% 1% 1% 7%;
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    font-size: 2rem;
+    border-radius: 10px;
+    color: white;
+    padding-left: 40%;
+    padding-bottom: 10%;
+  }
+  .home .walk .walk-text .btn:hover {
+    background-color: grey;
+    color: black;
+  }
+  .home .walk .walk-img {
+    width: 100%;
+    margin-left: 0%;
+  }
 }
