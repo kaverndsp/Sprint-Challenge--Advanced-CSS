@@ -1,1 +1,30 @@
 // Mixins Here
+.flex{
+    display:flex;
+}
+
+.crosscenter{
+    align-items: center;
+}
+
+.custom-button(@bg-colour, @width, @font-colour){
+   
+    background-color: @bg-colour;
+    padding:5% 1% 1% 7%;
+    cursor: pointer;
+    width: @width;
+    height: 45px;
+    font-size: 2rem;
+    border-radius: 10px;
+    color:@font-colour;
+    
+    &:hover{
+        background-color:grey;
+        color:black;
+
+      }
+    
+    
+  
+}
+
